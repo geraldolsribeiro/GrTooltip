@@ -1,0 +1,21 @@
+IFF_NO_PI
+
+This commit adds flag IFF_NO_PI to tun/tap interface settings on Linux. It
+changes frame format in order not to include protocol information header. That
+is, with this flag, frames received/send from tun/tap fd consist solely of raw
+underlying protocol (Ethernet/IP) frames.
+
+Protocol information header is not used by the element in any way, but its
+presence adds a requirement for pulling packet data on receive and pushing it
+before writing packet to the fd. Such a push becomes an expensive push when
+there is is no enough headroom in packet, for example when using native netmap
+buffers, which do not have any headroom.
+
+Adding IFF_NO_PI flag eliminates the need for pulling and pushing packet data
+completely.
+
+Moreover, this commit removes support for LINUX_ETHERTAP mode. Ethertap driver
+was removed from the kernel more than 15 years ago. Removal of this mode
+significantly simplifies the logic within the element.
+
+https://github.com/kohler/click/pull/397

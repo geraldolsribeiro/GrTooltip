@@ -1,0 +1,9 @@
+LINUX_ETHERTAP
+
+SEE IF_NO_PI
+
+Moreover, this commit removes support for LINUX_ETHERTAP mode. Ethertap driver
+was removed from the kernel more than 15 years ago. Removal of this mode
+significantly simplifies the logic within the element.
+
+https://github.com/kohler/click/pull/397

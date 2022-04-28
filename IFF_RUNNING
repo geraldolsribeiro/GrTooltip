@@ -1,4 +1,8 @@
 IFF_RUNNING
 
-Resources allocated.
+IFF_RUNNING is supposed to reflect the operational status on a network
+interface, rather than its administrative one. To provide an example, an
+Ethernet interface may be brought UP by the administrator (e.g. ifconfig eth0
+up), but it will not be considered operational (i.e. RUNNING as per RFC2863) 
+if the cable is not plugged in.
 
