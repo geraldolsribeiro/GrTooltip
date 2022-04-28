@@ -1,0 +1,6 @@
+SIOCGIFADDR
+
+Get the address of the device using ifr_addr. Setting the interface address is
+a privileged operation. For compatibility, only AF_INET addresses are accepted
+or returned.
+

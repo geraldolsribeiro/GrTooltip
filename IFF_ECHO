@@ -1,0 +1,7 @@
+IFF_ECHO
+
+Echo sent packets (since Linux 2.6.25)
+
+Setting the active flag word is a privileged operation, but any process
+may read it.
+

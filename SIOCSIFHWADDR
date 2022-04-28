@@ -1,0 +1,7 @@
+SIOCSIFHWADDR
+
+Set the hardware address of a device using ifr_hwaddr. The hardware address is
+specified in a struct sockaddr. sa_family contains the ARPHRD_* device type,
+sa_data the L2 hardware address starting from byte 0. Setting the hardware
+address is a privileged operation.
+

@@ -1,0 +1,6 @@
+SIOCGIFNETMASK
+
+Get the network mask for a device using ifr_netmask. For compatibility, only
+AF_INET addresses are accepted or returned. Setting the network mask is
+a privileged operation.
+

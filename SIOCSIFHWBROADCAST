@@ -1,0 +1,5 @@
+SIOCSIFHWBROADCAST
+
+Set the hardware broadcast address of a device from ifr_hwaddr. This is
+a privileged operation.
+

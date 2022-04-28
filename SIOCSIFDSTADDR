@@ -1,0 +1,6 @@
+SIOCSIFDSTADDR
+
+Set the destination address of a point-to-point device using ifr_dstaddr. For
+compatibility, only AF_INET addresses are accepted or returned. Setting the
+destination address is a privileged operation.
+

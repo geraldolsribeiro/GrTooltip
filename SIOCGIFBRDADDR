@@ -1,0 +1,6 @@
+SIOCGIFBRDADDR
+
+Get the broadcast address for a device using ifr_brdaddr. For compatibility,
+only AF_INET addresses are accepted or returned. Setting the broad‐ cast
+address is a privileged operation.
+

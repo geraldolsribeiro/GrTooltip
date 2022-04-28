@@ -1,0 +1,6 @@
+SIOCSIFMTU
+
+Set the MTU (Maximum Transfer Unit) of a device using ifr_mtu. Setting the MTU
+is a privileged operation. Setting the MTU to too small values may cause kernel
+crashes.
+

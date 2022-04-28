@@ -1,0 +1,7 @@
+IFF_ISATAP
+
+Interface is RFC4214 ISATAP interface.
+
+Setting the extended (private) interface flags is a privileged
+operation.
+

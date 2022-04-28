@@ -1,0 +1,40 @@
+SIOCGIFCONF
+
+Return a list of interface (network layer) addresses. This
+currently means only addresses of the AF_INET (IPv4) family for
+compatibility. Unlike the others, this ioctl passes an ifconf structure:
+
+struct ifconf {
+  int ifc_len; /* size of buffer */
+  union {
+    char *        ifc_buf; /* buffer address */
+    struct ifreq *ifc_req; /* array of structures */
+  };
+};
+
+If ifc_req is NULL, SIOCGIFCONF returns the necessary buffer size in
+bytes for receiving all available addresses in ifc_len. Otherwise,
+ifc_req contains a pointer to an array of ifreq structures to be filled
+with all currently active L3 interface addresses. ifc_len contains the
+size of the array in bytes. Within each ifreq structure, ifr_name will
+receive the interface name, and ifr_addr the address. The actual number
+of bytes transferred is returned in ifc_len.
+
+If the size specified by ifc_len is insufficient to store all the
+addresses, the kernel will skip the exceeding ones and return success.
+There is no re‐ liable way of detecting this condition once it has
+occurred. It is therefore recommended to either determine the necessary
+buffer size beforehand by calling SIOCGIFCONF with ifc_req set to NULL,
+or to retry the call with a bigger buffer whenever ifc_len upon return
+differs by less than sizeof(struct ifreq) from its original value.
+
+If an error occurs accessing the ifconf or ifreq structures, EFAULT will
+be returned.
+
+Most protocols support their own ioctls to configure protocol-specific
+interface options. See the protocol man pages for a description. For
+configuring IP ad‐ dresses, see ip(7).
+
+In addition, some devices support private ioctls. These are not
+described here.
+

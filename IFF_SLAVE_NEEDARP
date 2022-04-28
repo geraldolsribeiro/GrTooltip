@@ -1,0 +1,4 @@
+IFF_SLAVE_NEEDARP
+
+Interface needs ARPs for validation.
+

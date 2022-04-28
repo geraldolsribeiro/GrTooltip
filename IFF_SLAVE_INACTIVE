@@ -1,0 +1,8 @@
+IFF_SLAVE_INACTIVE
+
+Interface is inactive bonding slave.
+
+IFF_MASTER_8023AD
+
+Interface is 802.3ad bonding master.
+

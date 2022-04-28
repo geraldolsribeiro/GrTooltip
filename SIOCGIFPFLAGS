@@ -1,0 +1,5 @@
+SIOCGIFPFLAGS
+
+Get extended (private) flags for the device. ifr_flags contains a bit mask of
+the following values:
+

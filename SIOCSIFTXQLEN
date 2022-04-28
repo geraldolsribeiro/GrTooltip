@@ -1,0 +1,5 @@
+SIOCSIFTXQLEN
+
+Set the transmit queue length of a device using ifr_qlen. Setting the transmit
+queue length is a privileged operation.
+

@@ -1,0 +1,5 @@
+SIOCSIFNAME
+
+Changes the name of the interface specified in ifr_name to ifr_newname. This is
+a privileged operation. It is allowed only when the interface is not up.
+

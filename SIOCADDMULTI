@@ -1,0 +1,5 @@
+SIOCADDMULTI
+
+Add an address to the device's link layer multicast filters using ifr_hwaddr.
+These are privileged operations. See also packet(7) for an alternative.
+

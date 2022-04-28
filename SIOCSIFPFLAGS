@@ -1,0 +1,7 @@
+SIOCSIFPFLAGS
+
+Set extended (private) flags for the device. ifr_flags contains a bit mask of
+the following values:
+
+Private flags IFF_802_1Q_VLAN Interface is 802.1Q VLAN device.
+

@@ -1,0 +1,6 @@
+SIOCGIFMETRIC
+
+Get the metric of the device using ifr_metric. This is currently not
+implemented; it sets ifr_metric to 0 if you attempt to read it and returns
+EOPNOTSUPP if you attempt to set it.
+

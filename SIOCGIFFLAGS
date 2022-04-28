@@ -1,0 +1,7 @@
+SIOCGIFFLAGS
+
+Get the active flag word of the device. ifr_flags contains a bit mask of the
+following values:
+
+Device flags IFF_UP Interface is running.
+

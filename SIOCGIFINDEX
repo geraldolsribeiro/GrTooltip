@@ -1,0 +1,5 @@
+SIOCGIFINDEX
+
+Retrieve the interface index of the interface into
+ifr_ifindex.
+

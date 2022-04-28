@@ -1,0 +1,5 @@
+SIOCGIFNAME
+
+Given the ifr_ifindex, return the name of the interface in
+ifr_name. This is the only ioctl which returns its result in ifr_name.
+
