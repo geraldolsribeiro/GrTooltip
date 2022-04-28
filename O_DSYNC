@@ -1,0 +1,10 @@
+O_DSYNC
+
+Write operations on the file will complete according to the
+requirements of synchronized I/O data integrity completion.
+
+By the time write(2) (and similar) return, the output data has been
+transferred to the underlying hardware, along with any file metadata
+that would be re‐ quired to retrieve that data (i.e., as though each
+write(2) was followed by a call to fdatasync(2)). See NOTES below.
+

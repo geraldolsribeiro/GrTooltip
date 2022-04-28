@@ -1,0 +1,4 @@
+EBADF
+
+dirfd is not a valid file descriptor.
+

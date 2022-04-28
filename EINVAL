@@ -1,0 +1,5 @@
+EINVAL
+
+The filesystem does not support the O_DIRECT flag. See NOTES for
+more information.
+

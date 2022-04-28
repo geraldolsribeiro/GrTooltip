@@ -1,0 +1,6 @@
+O_NOCTTY
+
+If pathname refers to a terminal device—see tty(4)—it will not
+become the process's controlling terminal even if the process does not
+have one.
+

@@ -1,0 +1,8 @@
+O_ASYNC
+
+Enable signal-driven I/O: generate a signal (SIGIO by default,
+but this can be changed via fcntl(2)) when input or output becomes
+possible on this file descriptor. This feature is available only for
+terminals, pseudoterminals, sockets, and (since Linux 2.6) pipes and
+FIFOs. See fcntl(2) for further de‐ tails. See also BUGS, below.
+

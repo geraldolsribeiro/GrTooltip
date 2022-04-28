@@ -1,0 +1,5 @@
+ENOSPC
+
+pathname was to be created but the device containing pathname has
+no room for the new file.
+

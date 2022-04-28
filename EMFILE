@@ -1,0 +1,5 @@
+EMFILE
+
+The per-process limit on the number of open file descriptors has
+been reached (see the description of RLIMIT_NOFILE in getrlimit(2)).
+

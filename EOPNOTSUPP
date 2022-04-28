@@ -1,0 +1,5 @@
+EOPNOTSUPP
+
+The filesystem containing pathname does not support
+O_TMPFILE.
+

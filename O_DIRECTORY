@@ -1,0 +1,6 @@
+O_DIRECTORY
+
+If pathname is not a directory, cause the open to fail. This
+flag was added in kernel version 2.1.126, to avoid denial-of-service
+problems if opendir(3) is called on a FIFO or tape device.
+

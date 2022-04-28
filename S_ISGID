@@ -1,0 +1,4 @@
+S_ISGID
+
+0002000 set-group-ID bit (see inode(7)).
+

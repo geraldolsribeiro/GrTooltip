@@ -1,0 +1,6 @@
+ENOMEM
+
+The named file is a FIFO, but memory for the FIFO buffer can't be
+allocated because the per-user hard limit on memory allocation for pipes
+has been reached and the caller is not privileged; see pipe(7).
+

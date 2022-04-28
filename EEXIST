@@ -1,0 +1,4 @@
+EEXIST
+
+pathname already exists and O_CREAT and O_EXCL were used.
+

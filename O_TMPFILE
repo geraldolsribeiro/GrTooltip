@@ -1,0 +1,8 @@
+O_TMPFILE
+
+(since Linux 3.11) Create an unnamed temporary regular file.
+The pathname argument specifies a directory; an unnamed inode will be
+created in that directory's filesystem. Anything written to the
+resulting file will be lost when the last file descriptor is closed,
+unless the file is given a name.
+

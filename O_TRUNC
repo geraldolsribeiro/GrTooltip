@@ -1,0 +1,28 @@
+O_TRUNC
+
+If the file already exists and is a regular file and the access
+mode allows writing (i.e., is O_RDWR or O_WRONLY) it will be truncated
+to length 0. If the file is a FIFO or terminal device file, the O_TRUNC
+flag is ignored. Otherwise, the effect of O_TRUNC is unspecified.
+
+creat() A call to creat() is equivalent to calling open() with flags
+equal to O_CREAT|O_WRONLY|O_TRUNC.
+
+openat() The openat() system call operates in exactly the same way as
+open(), except for the differences described here.
+
+If the pathname given in pathname is relative, then it is interpreted
+relative to the directory referred to by the file descriptor dirfd
+(rather than relative to the current working directory of the calling
+process, as is done by open() for a relative pathname).
+
+If pathname is relative and dirfd is the special value AT_FDCWD, then
+pathname is interpreted relative to the current working directory of the
+calling process (like open()).
+
+If pathname is absolute, then dirfd is ignored.
+
+openat2(2) The openat2(2) system call is an extension of openat(), and
+provides a superset of the features of openat(). It is documented
+separately, in openat2(2).
+

@@ -1,0 +1,6 @@
+EINTR
+
+While blocked waiting to complete an open of a slow device (e.g.,
+a FIFO; see fifo(7)), the call was interrupted by a signal handler; see
+signal(7).
+

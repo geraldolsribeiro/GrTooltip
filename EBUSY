@@ -1,0 +1,5 @@
+EBUSY
+
+O_EXCL was specified in flags and pathname refers to a block
+device that is in use by the system (e.g., it is mounted).
+

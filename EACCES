@@ -1,0 +1,7 @@
+EACCES
+
+The requested access to the file is not allowed, or search
+permission is denied for one of the directories in the path prefix of
+pathname, or the file did not exist yet and write access to the parent
+directory is not allowed. (See also path_resolution(7).)
+

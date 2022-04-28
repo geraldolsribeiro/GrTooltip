@@ -1,0 +1,5 @@
+EISDIR
+
+pathname refers to a directory and the access requested involved
+writing (that is, O_WRONLY or O_RDWR is set).
+

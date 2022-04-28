@@ -1,0 +1,6 @@
+EDQUOT
+
+Where O_CREAT is specified, the file does not exist, and the
+user's quota of disk blocks or inodes on the filesystem has been
+exhausted.
+

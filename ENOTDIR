@@ -1,0 +1,6 @@
+ENOTDIR
+
+A component used as a directory in pathname is not, in fact, a
+directory, or O_DIRECTORY was specified and pathname was not a
+directory.
+

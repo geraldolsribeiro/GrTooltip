@@ -1,6 +1,6 @@
 #!/bin/bash
 
-for man in socket netdevice
+for man in socket netdevice open
 do
   # Script vim
   cat <<EOF > s1
@@ -10,7 +10,7 @@ EOF
 
   # If the txt file exists the automatic edition is ignored
   if [ ! -f "$man.txt" ]; then
-    man 7 $man | pandoc -f man -t plain > $man.txt
+    man 7 $man || man 2 $man | pandoc -f man -t plain > $man.txt
     vim -s s1 $man.txt
   fi
   rm s1

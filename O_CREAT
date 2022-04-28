@@ -1,0 +1,33 @@
+O_CREAT
+
+If pathname does not exist, create it as a regular file.
+
+The owner (user ID) of the new file is set to the effective user ID of
+the process.
+
+The group ownership (group ID) of the new file is set either to the
+effective group ID of the process (System V semantics) or to the group
+ID of the par‐ ent directory (BSD semantics). On Linux, the behavior
+depends on whether the set-group-ID mode bit is set on the parent
+directory: if that bit is set, then BSD semantics apply; otherwise,
+System V semantics apply. For some filesystems, the behavior also
+depends on the bsdgroups and sysvgroups mount op‐ tions described in
+mount(8).
+
+The mode argument specifies the file mode bits to be applied when a new
+file is created. If neither O_CREAT nor O_TMPFILE is specified in flags,
+then mode is ignored (and can thus be specified as 0, or simply
+omitted). The mode argument must be supplied if O_CREAT or O_TMPFILE is
+specified in flags; if it is not supplied, some arbitrary bytes from the
+stack will be applied as the file mode.
+
+The effective mode is modified by the process's umask in the usual way:
+in the absence of a default ACL, the mode of the created file is (mode &
+~umask).
+
+Note that mode applies only to future accesses of the newly created
+file; the open() call that creates a read-only file may well return a
+read/write file descriptor.
+
+The following symbolic constants are provided for mode:
+

@@ -1,0 +1,4 @@
+ERRORS
+
+open(), openat(), and creat() can fail with the following errors:
+

@@ -1,0 +1,7 @@
+S_IXOTH
+
+00001 others have execute permission
+
+According to POSIX, the effect when other bits are set in mode is
+unspecified. On Linux, the following bits are also honored in mode:
+

@@ -1,0 +1,9 @@
+EOVERFLOW
+
+pathname refers to a regular file that is too large to be
+opened. The usual scenario here is that an application compiled on a
+32-bit platform without -D_FILE_OFFSET_BITS=64 tried to open a file
+whose size exceeds (1<<31)-1 bytes; see also O_LARGEFILE above. This is
+the error specified by POSIX.1; in kernels before 2.6.24, Linux gave the
+error EFBIG for this case.
+

@@ -1,0 +1,5 @@
+ETXTBSY
+
+pathname refers to an executable image which is currently being
+executed and write access was requested.
+

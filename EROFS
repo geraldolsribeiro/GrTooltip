@@ -1,0 +1,5 @@
+EROFS
+
+pathname refers to a file on a read-only filesystem and write
+access was requested.
+

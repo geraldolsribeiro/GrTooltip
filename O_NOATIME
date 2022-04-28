@@ -1,0 +1,18 @@
+O_NOATIME
+
+(since Linux 2.6.8) Do not update the file last access time
+(st_atime in the inode) when the file is read(2).
+
+This flag can be employed only if one of the following conditions is
+true:
+
+* The effective UID of the process matches the owner UID of the file.
+
+* The calling process has the CAP_FOWNER capability in its user
+namespace and the owner UID of the file has a mapping in the namespace.
+
+This flag is intended for use by indexing or backup programs, where its
+use can significantly reduce the amount of disk activity. This flag may
+not be effective on all filesystems. One example is NFS, where the
+server maintains the access time.
+

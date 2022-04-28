@@ -1,0 +1,6 @@
+ENODEV
+
+pathname refers to a device special file and no corresponding
+device exists. (This is a Linux kernel bug; in this situation ENXIO must
+be returned.)
+

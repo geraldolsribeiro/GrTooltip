@@ -1,0 +1,6 @@
+EPERM
+
+The O_NOATIME flag was specified, but the effective user ID of the
+caller did not match the owner of the file and the caller was not
+privileged.
+

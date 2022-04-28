@@ -1,0 +1,4 @@
+S_ISVTX
+
+0001000 sticky bit (see inode(7)).
+
