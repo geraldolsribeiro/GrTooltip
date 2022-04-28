@@ -1,0 +1,5 @@
+SO_DEBUG
+
+Enable socket debugging. Allowed only for processes with the
+CAP_NET_ADMIN capability or an effective user ID of 0.
+

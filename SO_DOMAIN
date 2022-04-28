@@ -1,0 +1,6 @@
+SO_DOMAIN
+
+(since Linux 2.6.32) Retrieves the socket domain as an
+integer, returning a value such as AF_INET6. See socket(2) for details.
+This socket option is read-only.
+

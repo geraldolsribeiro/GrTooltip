@@ -1,0 +1,7 @@
+SIOCSPGRP
+
+Set the process or process group that is to receive SIGIO or
+SIGURG signals when I/O becomes possible or urgent data is available.
+The argument is a pointer to a pid_t. For further details, see the
+description of F_SETOWN in fcntl(2).
+

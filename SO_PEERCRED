@@ -1,0 +1,5 @@
+SO_PEERCRED
+
+Return the credentials of the peer process connected to this
+socket. For further details, see unix(7).
+

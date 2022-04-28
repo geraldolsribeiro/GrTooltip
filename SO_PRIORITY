@@ -1,0 +1,8 @@
+SO_PRIORITY
+
+Set the protocol-defined priority for all packets to be sent
+on this socket. Linux uses this value to order the networking queues:
+packets with a higher priority may be processed first depending on the
+selected device queueing discipline. Setting a priority outside the
+range 0 to 6 requires the CAP_NET_ADMIN capability.
+

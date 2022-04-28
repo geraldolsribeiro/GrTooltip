@@ -1,0 +1,15 @@
+SO_INCOMING_CPU
+
+(gettable since Linux 3.19, settable since Linux 4.4)
+Sets or gets the CPU affinity of a socket. Expects an integer flag.
+
+int cpu = 1; setsockopt(fd, SOL_SOCKET, SO_INCOMING_CPU, &cpu,
+sizeof(cpu));
+
+Because all of the packets for a single stream (i.e., all packets for
+the same 4-tuple) arrive on the single RX queue that is associated with
+a particular CPU, the typical use case is to employ one listening
+process per RX queue, with the incoming flow being handled by a listener
+on the same CPU that is han‐ dling the RX queue. This provides optimal
+NUMA behavior and keeps CPU caches hot.
+

@@ -1,0 +1,5 @@
+SO_PASSCRED
+
+Enable or disable the receiving of the SCM_CREDENTIALS
+control message. For more information see unix(7).
+

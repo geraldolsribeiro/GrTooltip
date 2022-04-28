@@ -1,0 +1,7 @@
+SO_ACCEPTCONN
+
+Returns a value indicating whether or not this socket has
+been marked to accept connections with listen(2). The value 0 indicates
+that this is not a lis‐ tening socket, the value 1 indicates that this
+is a listening socket. This socket option is read-only.
+

@@ -1,0 +1,6 @@
+SO_OOBINLINE
+
+If this option is enabled, out-of-band data is directly
+placed into the receive data stream. Otherwise, out-of-band data is
+passed only when the MSG_OOB flag is set during receiving.
+

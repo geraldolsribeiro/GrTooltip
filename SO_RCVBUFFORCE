@@ -1,0 +1,6 @@
+SO_RCVBUFFORCE
+
+(since Linux 2.6.14) Using this socket option, a
+privileged (CAP_NET_ADMIN) process can perform the same task as
+SO_RCVBUF, but the rmem_max limit can be overridden.
+

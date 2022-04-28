@@ -1,0 +1,9 @@
+FIOASYNC
+
+Change the O_ASYNC flag to enable or disable asynchronous I/O
+mode of the socket. Asynchronous I/O mode means that the SIGIO signal or
+the signal set with F_SETSIG is raised when a new I/O event occurs.
+
+Argument is an integer boolean flag. (This operation is synonymous with
+the use of fcntl(2) to set the O_ASYNC flag.)
+

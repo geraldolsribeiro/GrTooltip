@@ -1,0 +1,27 @@
+#!/bin/bash
+
+# Script vim
+cat <<EOF > s1
+:%s/\n\n^\([A-Z_]\{5,\}\) /\r\r===== \1\r\r/
+:wq
+EOF
+
+man 7 socket | pandoc -f man -t plain > socket.txt
+vim -s s1 socket.txt
+rm s1
+
+csplit socket.txt '/===== /' '{*}'
+rm socket.txt
+
+for i in xx*
+do
+  filename=$( sed -n "s/^===== //p" "$i" )
+  if [ -n "$filename" ] && [ ! -f "$filename" ]; then
+    echo "Processing $filename"
+    mv "$i" "$filename"
+    sed -i "s/^===== //" "$filename"
+  else
+    echo "Ignoring $filename"
+    rm "$i"
+  fi
+done

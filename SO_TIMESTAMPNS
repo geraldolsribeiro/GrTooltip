@@ -1,0 +1,13 @@
+SO_TIMESTAMPNS
+
+(since Linux 2.6.22) Enable or disable the receiving of
+the SO_TIMESTAMPNS control message. The timestamp control message is
+sent with level SOL_SOCKET and a cmsg_type of SCM_TIMESTAMPNS. The
+cmsg_data field is a struct timespec indicating the reception time of
+the last packet passed to the user in this call. The clock used for the
+timestamp is CLOCK_REALTIME. See cmsg(3) for details on control
+messages.
+
+A socket cannot mix SO_TIMESTAMP and SO_TIMESTAMPNS: the two modes are
+mutually exclusive.
+

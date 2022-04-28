@@ -1,0 +1,8 @@
+SO_TIMESTAMP
+
+Enable or disable the receiving of the SO_TIMESTAMP control
+message. The timestamp control message is sent with level SOL_SOCKET and
+a cmsg_type of SCM_TIMESTAMP. The cmsg_data field is a struct timeval
+indicating the reception time of the last packet passed to the user in
+this call. See cmsg(3) for details on control messages.
+

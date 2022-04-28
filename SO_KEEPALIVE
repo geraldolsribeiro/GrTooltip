@@ -1,0 +1,5 @@
+SO_KEEPALIVE
+
+Enable sending of keep-alive messages on
+connection-oriented sockets. Expects an integer boolean flag.
+

@@ -1,0 +1,5 @@
+SO_TYPE
+
+Gets the socket type as an integer (e.g., SOCK_STREAM). This
+socket option is read-only.
+

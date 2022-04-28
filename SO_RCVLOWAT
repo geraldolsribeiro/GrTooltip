@@ -1,0 +1,16 @@
+SO_RCVLOWAT
+
+and SO_SNDLOWAT Specify the minimum number of bytes in the
+buffer until the socket layer will pass the data to the protocol
+(SO_SNDLOWAT) or the user on receiving (SO_RCVLOWAT). These two values
+are initialized to 1. SO_SNDLOWAT is not changeable on Linux
+(setsockopt(2) fails with the error ENOPROTOOPT). SO_RCVLOWAT is
+changeable only since Linux 2.4.
+
+Before Linux 2.6.28 select(2), poll(2), and epoll(7) did not respect the
+SO_RCVLOWAT setting on Linux, and indicated a socket as readable when
+even a sin‐ gle byte of data was available. A subsequent read from the
+socket would then block until SO_RCVLOWAT bytes are available. Since
+Linux 2.6.28, select(2), poll(2), and epoll(7) indicate a socket as
+readable only if at least SO_RCVLOWAT bytes are available.
+

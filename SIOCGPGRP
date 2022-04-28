@@ -1,0 +1,7 @@
+SIOCGPGRP
+
+Get the current process or process group that receives SIGIO
+or SIGURG signals, or 0 when none is set.
+
+Valid fcntl(2) operations:
+

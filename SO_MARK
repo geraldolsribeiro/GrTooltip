@@ -1,0 +1,8 @@
+SO_MARK
+
+(since Linux 2.6.25) Set the mark for each packet sent through
+this socket (similar to the netfilter MARK target but socket-based).
+Changing the mark can be used for mark- based routing without netfilter
+or for packet filtering. Setting this option requires the CAP_NET_ADMIN
+capability.
+

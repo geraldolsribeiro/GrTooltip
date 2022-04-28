@@ -1,0 +1,16 @@
+SO_SELECT_ERR_QUEUE
+
+(since Linux 3.10) When this option is set on a
+socket, an error condition on a socket causes notification not only via
+the exceptfds set of select(2). Similarly, poll(2) also returns a
+POLLPRI whenever an POLLERR event is returned.
+
+Background: this option was added when waking up on an error condition
+occurred only via the readfds and writefds sets of select(2). The option
+was added to allow monitoring for error conditions via the exceptfds
+argument without simultaneously having to receive notifications (via
+readfds) for regular data that can be read from the socket. After
+changes in Linux 4.16, the use of this flag to achieve the desired
+notifications is no longer necessary. This option is nevertheless
+retained for backwards compatibility.
+

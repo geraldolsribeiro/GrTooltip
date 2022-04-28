@@ -1,0 +1,17 @@
+SO_LOCK_FILTER
+
+When set, this option will prevent changing the filters
+associated with the socket. These filters include any set using the
+socket options SO_ATTACH_FIL‐ TER, SO_ATTACH_BPF,
+SO_ATTACH_REUSEPORT_CBPF, and SO_ATTACH_REUSEPORT_EBPF.
+
+The typical use case is for a privileged process to set up a raw socket
+(an operation that requires the CAP_NET_RAW capability), apply a
+restrictive fil‐ ter, set the SO_LOCK_FILTER option, and then either
+drop its privileges or pass the socket file descriptor to an
+unprivileged process via a UNIX domain socket.
+
+Once the SO_LOCK_FILTER option has been enabled, attempts to change or
+remove the filter attached to a socket, or to disable the SO_LOCK_FILTER
+option will fail with the error EPERM.
+

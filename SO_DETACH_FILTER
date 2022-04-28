@@ -1,0 +1,7 @@
+SO_DETACH_FILTER
+
+(since Linux 2.2), SO_DETACH_BPF (since Linux 3.19)
+These two options, which are synonyms, may be used to remove the classic
+or extended BPF program attached to a socket with either
+SO_ATTACH_FILTER or SO_ATTACH_BPF. The option value is ignored.
+

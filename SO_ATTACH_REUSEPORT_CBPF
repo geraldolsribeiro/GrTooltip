@@ -1,0 +1,9 @@
+SO_ATTACH_REUSEPORT_CBPF
+
+takes the same argument type as
+SO_ATTACH_FILTER and SO_ATTACH_REUSEPORT_EBPF takes the same argument
+type as SO_ATTACH_BPF.
+
+UDP support for this feature is available since Linux 4.5; TCP support
+is available since Linux 4.6.
+

@@ -1,0 +1,6 @@
+SO_DONTROUTE
+
+Don't send via a gateway, send only to directly connected
+hosts. The same effect can be achieved by setting the MSG_DONTROUTE flag
+on a socket send(2) operation. Expects an integer boolean flag.
+

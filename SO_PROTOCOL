@@ -1,0 +1,6 @@
+SO_PROTOCOL
+
+(since Linux 2.6.32) Retrieves the socket protocol as an
+integer, returning a value such as IPPROTO_SCTP. See socket(2) for
+details. This socket option is read-only.
+

@@ -1,0 +1,12 @@
+SO_BSDCOMPAT
+
+Enable BSD bug-to-bug compatibility. This is used by the
+UDP protocol module in Linux 2.0 and 2.2. If enabled, ICMP errors
+received for a UDP socket will not be passed to the user program. In
+later kernel versions, support for this option has been phased out:
+Linux 2.4 silently ignores it, and Linux 2.6 generates a kernel warning
+(printk()) if a program uses this option. Linux 2.0 also enabled BSD
+bug-to-bug compatibility options (random header changing, skipping of
+the broadcast flag) for raw sockets with this option, but that was
+removed in Linux 2.2.
+

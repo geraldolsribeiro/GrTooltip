@@ -1,0 +1,6 @@
+SO_RXQ_OVFL
+
+(since Linux 2.6.33) Indicates that an unsigned 32-bit value
+ancillary message (cmsg) should be attached to received skbs indicating
+the number of packets dropped by the socket since its creation.
+
