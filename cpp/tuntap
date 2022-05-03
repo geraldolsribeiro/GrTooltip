@@ -88,8 +88,10 @@ Copyright (C) 1999-2000 Maxim Krasnyansky <max_mk@yahoo.com>
        *        IFF_NO_PI - Do not provide packet information  
        */ 
       ifr.ifr_flags = IFF_TUN; 
-      if( *dev )
-         strncpy(ifr.ifr_name, dev, IFNAMSIZ);
+      if( *dev ) {
+        // dev="tun%d" or any valid network device name
+        strncpy(ifr.ifr_name, dev, IFNAMSIZ);
+      }
 
       if( (err = ioctl(fd, TUNSETIFF, (void *) &ifr)) < 0 ){
          close(fd);
@@ -225,3 +227,5 @@ to attach BPF to this interface.
 
 6. Does TAP driver support kernel Ethernet bridging?
 Yes. Linux and FreeBSD drivers support Ethernet bridging. 
+
+vim: ft=cpp

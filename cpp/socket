@@ -690,3 +690,5 @@ and the latest version of this page, can be found at
 https://www.kernel.org/doc/man-pages/.
 
 Linux 2020-08-13 SOCKET(7)
+
+vim: ft=cpp

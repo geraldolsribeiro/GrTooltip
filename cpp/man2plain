@@ -30,3 +30,8 @@ EOF
     fi
   done
 done
+
+for i in COLOPHON CONFORMING DESCRIPTION NOTES RETURN SYNOPSIS VERSIONS
+do
+  rm -f "$i"
+done
