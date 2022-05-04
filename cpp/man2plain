@@ -12,17 +12,17 @@ EOF
   for n in 2 3 7
   do
     # man 7 $man || man 2 $man | pandoc -f man -t plain > $man.txt
-    if [ ! -f "${man}$n" ]; then
-      man $n $man | pandoc -f man -t plain > ${man}$n
-      vim -s s1 ${man}$n
+    if [ ! -f ".man/${man}$n" ]; then
+      man $n $man | pandoc -f man -t plain > .man/${man}$n
+      vim -s s1 .man/${man}$n
     fi
   done
   rm s1
 
   for n in 2 3 7
   do
-    if [ -f "${man}$n" ]; then
-      csplit ${man}$n '/===== /' '{*}'
+    if [ -f ".man/${man}$n" ]; then
+      csplit .man/${man}$n '/===== /' '{*}'
       for i in xx*
       do
         filename=$( sed -n "s/^===== //p" "$i" )

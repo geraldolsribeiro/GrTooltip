@@ -1,0 +1,6 @@
+Socket Structure        Address Family
+struct sockaddr_dl      AF_LINK
+struct sockaddr_in      AF_INET
+struct sockaddr_in6     AF_INET6
+struct sockaddr_ll      AF_PACKET
+struct sockaddr_un      AF_UNIX
