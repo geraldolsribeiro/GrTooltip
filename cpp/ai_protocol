@@ -1,0 +1,6 @@
+ai_protocol
+
+This field specifies the protocol for the returned socket
+addresses. Specifying 0 in this field indicates that socket addresses
+with any protocol can be returned by getaddrinfo().
+

@@ -1,0 +1,6 @@
+ai_socktype
+
+This field specifies the preferred socket type, for example
+SOCK_STREAM or SOCK_DGRAM. Specifying 0 in this field indicates that
+socket addresses of any type can be returned by getaddrinfo().
+
