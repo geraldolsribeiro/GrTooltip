@@ -1,0 +1,5 @@
+AF_VSOCK
+
+VSOCK (originally "VMWare VSockets") vsock(7) protocol for hypervisor-guest communication
+
+

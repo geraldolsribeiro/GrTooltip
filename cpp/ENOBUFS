@@ -1,0 +1,6 @@
+ENOBUFS
+
+Insufficient memory is available. The socket cannot be created until sufficient resources are freed.
+
+
+

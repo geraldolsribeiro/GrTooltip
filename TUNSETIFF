@@ -1,0 +1,11 @@
+TUNSETIFF
+
+The queue were enabled by default after it was created through TUNSETIFF.
+
+From version 3.8, Linux supports multiqueue tuntap which can uses multiple file
+descriptors (queues) to parallelize packets sending or receiving.
+
+The device allocation is the same as before, and if user wants to create
+multiple queues, TUNSETIFF with the same device name must be called many times
+with IFF_MULTI_QUEUE flag.
+

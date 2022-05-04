@@ -1,0 +1,5 @@
+SOCK_DGRAM
+
+Supports datagrams (connectionless, unreliable messages of a fixed maximum length).
+
+

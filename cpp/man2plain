@@ -9,24 +9,32 @@ do
 EOF
 
   # If the txt file exists the automatic edition is ignored
-  if [ ! -f "$man.txt" ]; then
-    man 7 $man || man 2 $man | pandoc -f man -t plain > $man.txt
-    vim -s s1 $man.txt
-  fi
+  for n in 2 7
+  do
+    # man 7 $man || man 2 $man | pandoc -f man -t plain > $man.txt
+    if [ ! -f "${man}$n" ]; then
+      man $n $man | pandoc -f man -t plain > ${man}$n
+      vim -s s1 ${man}$n
+    fi
+  done
   rm s1
 
-  csplit $man.txt '/===== /' '{*}'
-
-  for i in xx*
+  for n in 2 7
   do
-    filename=$( sed -n "s/^===== //p" "$i" )
-    if [ -n "$filename" ] && [ ! -f "$filename" ]; then
-      echo "Processing $filename"
-      mv "$i" "$filename"
-      sed -i "s/^===== //" "$filename"
-    else
-      echo "Ignoring $filename"
-      rm "$i"
+    if [ -f "${man}$n" ]; then
+      csplit ${man}$n '/===== /' '{*}'
+      for i in xx*
+      do
+        filename=$( sed -n "s/^===== //p" "$i" )
+        if [ -n "$filename" ] && [ ! -f "$filename" ]; then
+          echo "Processing $filename"
+          mv "$i" "$filename"
+          sed -i "s/^===== //" "$filename"
+        else
+          echo "Ignoring $filename"
+          rm "$i"
+        fi
+      done
     fi
   done
 done

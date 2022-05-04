@@ -1,9 +1,12 @@
 TUNSETQUEUE
 
-A new ioctl(TUNSETQUEUE) were introduced to enable or disable a queue. When
-calling it with IFF_DETACH_QUEUE flag, the queue were disabled. And when
-calling it with IFF_ATTACH_QUEUE flag, the queue were enabled. The queue were
-enabled by default after it was created through TUNSETIFF.
+A new ioctl(TUNSETQUEUE) were introduced to enable or disable a queue.
+
+When calling it with IFF_DETACH_QUEUE flag, the queue were disabled.
+
+And when calling it with IFF_ATTACH_QUEUE flag, the queue were enabled.
+
+The queue were enabled by default after it was created through TUNSETIFF.
 
 fd is the file descriptor (queue) that we want to enable or disable, when
 enable is true we enable it, otherwise we disable it

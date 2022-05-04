@@ -1,0 +1,11 @@
+SOCK_PACKET
+
+Obsolete and should not be used in new programs; see packet(7).
+
+
+
+       Some socket types may not be implemented by all protocol families.
+
+       Since  Linux  2.6.27,  the  type argument serves a second purpose: in addition to specifying a socket type, it may include the bitwise OR of any of the following
+       values, to modify the behavior of socket():
+
