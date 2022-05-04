@@ -1,0 +1,8 @@
+SEGV_PKUERR
+
+(since Linux 4.6) Access was denied by memory protection
+keys. See pkeys(7). The protection key which applied to this access is
+available via si_pkey.
+
+The following values can be placed in si_code for a SIGBUS signal:
+

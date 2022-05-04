@@ -1,0 +1,7 @@
+SA_ONSTACK
+
+Call the signal handler on an alternate signal stack provided
+by sigaltstack(2). If an alternate stack is not available, the default
+stack will be used. This flag is meaningful only when establishing a
+signal handler.
+

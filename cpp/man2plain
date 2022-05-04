@@ -1,6 +1,6 @@
 #!/bin/bash
 
-for man in socket netdevice open gai_strerror getaddrinfo
+for man in socket netdevice open gai_strerror getaddrinfo sigaction
 do
   # Script vim
   cat <<EOF > s1

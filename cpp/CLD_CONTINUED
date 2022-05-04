@@ -1,0 +1,7 @@
+CLD_CONTINUED
+
+(since Linux 2.6.9) Stopped child has continued.
+
+The following values can be placed in si_code for a SIGIO/SIGPOLL
+signal:
+

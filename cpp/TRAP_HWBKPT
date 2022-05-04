@@ -1,0 +1,6 @@
+TRAP_HWBKPT
+
+(since Linux 2.4, IA64 only) Hardware breakpoint/watchpoint.
+
+The following values can be placed in si_code for a SIGCHLD signal:
+

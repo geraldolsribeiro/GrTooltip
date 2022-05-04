@@ -1,0 +1,6 @@
+FPE_FLTSUB
+
+Subscript out of range.
+
+The following values can be placed in si_code for a SIGSEGV signal:
+

@@ -1,0 +1,4 @@
+SYS_SECCOMP
+
+(since Linux 3.5) Triggered by a seccomp(2) filter rule.
+

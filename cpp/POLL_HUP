@@ -1,0 +1,6 @@
+POLL_HUP
+
+Device disconnected.
+
+The following value can be placed in si_code for a SIGSYS signal:
+

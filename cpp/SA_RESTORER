@@ -1,0 +1,6 @@
+SA_RESTORER
+
+Not intended for application use. This flag is used by C
+libraries to indicate that the sa_restorer field contains the address of
+a "signal trampoline". See sigreturn(2) for more details.
+

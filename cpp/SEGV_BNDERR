@@ -1,0 +1,4 @@
+SEGV_BNDERR
+
+(since Linux 3.19) Failed address bound checks.
+

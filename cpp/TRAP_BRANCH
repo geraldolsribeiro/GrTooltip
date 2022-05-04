@@ -1,0 +1,4 @@
+TRAP_BRANCH
+
+(since Linux 2.4, IA64 only) Process taken branch trap.
+

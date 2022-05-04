@@ -1,0 +1,8 @@
+SA_NOCLDSTOP
+
+If signum is SIGCHLD, do not receive notification when
+child processes stop (i.e., when they receive one of SIGSTOP, SIGTSTP,
+SIGTTIN, or SIGTTOU) or re‐ sume (i.e., they receive SIGCONT) (see
+wait(2)). This flag is meaningful only when establishing a handler for
+SIGCHLD.
+

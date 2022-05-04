@@ -1,0 +1,8 @@
+SA_NODEFER
+
+Do not add the signal to the thread's signal mask while the
+handler is executing, unless the signal is specified in act.sa_mask.
+Consequently, a further instance of the signal may be delivered to the
+thread while it is executing the handler. This flag is meaningful only
+when establishing a signal handler.
+

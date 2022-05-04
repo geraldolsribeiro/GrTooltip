@@ -1,0 +1,6 @@
+SI_TKILL
+
+(since Linux 2.4.19) tkill(2) or tgkill(2).
+
+The following values can be placed in si_code for a SIGILL signal:
+

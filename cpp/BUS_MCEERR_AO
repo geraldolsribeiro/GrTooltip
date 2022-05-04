@@ -1,0 +1,7 @@
+BUS_MCEERR_AO
+
+(since Linux 2.6.32) Hardware memory error detected in
+process but not consumed; action optional.
+
+The following values can be placed in si_code for a SIGTRAP signal:
+

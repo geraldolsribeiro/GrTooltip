@@ -1,0 +1,6 @@
+SA_RESETHAND
+
+Restore the signal action to the default upon entry to the
+signal handler. This flag is meaningful only when establishing a signal
+handler.
+

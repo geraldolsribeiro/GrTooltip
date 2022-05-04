@@ -1,0 +1,5 @@
+BUS_MCEERR_AR
+
+(since Linux 2.6.32) Hardware memory error consumed on a
+machine check; action required.
+

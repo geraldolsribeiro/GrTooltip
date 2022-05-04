@@ -1,0 +1,5 @@
+SI_SIGIO
+
+Queued SIGIO (only in kernels up to Linux 2.2; from Linux 2.4
+onward SIGIO/SIGPOLL fills in si_code as described below).
+

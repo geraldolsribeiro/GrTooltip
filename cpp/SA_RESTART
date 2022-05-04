@@ -1,0 +1,7 @@
+SA_RESTART
+
+Provide behavior compatible with BSD signal semantics by
+making certain system calls restartable across signals. This flag is
+meaningful only when estab‐ lishing a signal handler. See signal(7) for
+a discussion of system call restarting.
+

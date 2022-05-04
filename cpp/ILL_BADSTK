@@ -1,0 +1,6 @@
+ILL_BADSTK
+
+Internal stack error.
+
+The following values can be placed in si_code for a SIGFPE signal:
+

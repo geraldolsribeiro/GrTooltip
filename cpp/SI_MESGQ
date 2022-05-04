@@ -1,0 +1,5 @@
+SI_MESGQ
+
+(since Linux 2.6.6) POSIX message queue state changed; see
+mq_notify(3).
+
