@@ -69,7 +69,7 @@ with any protocol can be returned by getaddrinfo().
 
 This field specifies additional options, described below.
 
-===== EXAMPLES
+===== _SKIP_
 
 Multiple flags are specified by bitwise OR-ing them together.
 
@@ -306,7 +306,7 @@ be assumed as 0. The GNU C library instead assumes a value of
 (AI_V4MAPPED | AI_ADDRCON‐ FIG) for this case, since this value is
 considered an improvement on the specification.
 
-===== EXAMPLES
+===== _SKIP_
 
 The following programs demonstrate the use of getaddrinfo(),
 gai_strerror(), freeaddrinfo(), and getnameinfo(3). The programs are an

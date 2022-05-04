@@ -1,0 +1,6 @@
+FD_SET
+
+This macro adds the file descriptor fd to set. Adding a file
+descriptor that is already present in the set is a no-op, and does not
+produce an error.
+

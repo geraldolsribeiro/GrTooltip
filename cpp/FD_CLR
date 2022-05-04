@@ -1,0 +1,6 @@
+FD_CLR
+
+This macro removes the file descriptor fd from set. Removing a
+file descriptor that is not present in the set is a no-op, and does not
+produce an error.
+

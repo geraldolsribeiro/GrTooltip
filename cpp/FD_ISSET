@@ -1,0 +1,123 @@
+FD_ISSET
+
+select() modifies the contents of the sets according to the
+rules described below. After calling select(), the FD_ISSET() macro can
+be used to test if a file descriptor is still present in a set.
+FD_ISSET() returns nonzero if the file descriptor fd is present in set,
+and zero if it is not.
+
+Arguments The arguments of select() are as follows:
+
+readfds The file descriptors in this set are watched to see if they are
+ready for reading. A file descriptor is ready for reading if a read
+operation will not block; in particular, a file descriptor is also ready
+on end-of-file.
+
+After select() has returned, readfds will be cleared of all file
+descriptors except for those that are ready for reading.
+
+writefds The file descriptors in this set are watched to see if they are
+ready for writing. A file descriptor is ready for writing if a write
+operation will not block. However, even if a file descriptor indicates
+as writable, a large write may still block.
+
+After select() has returned, writefds will be cleared of all file
+descriptors except for those that are ready for writing.
+
+exceptfds The file descriptors in this set are watched for "exceptional
+conditions". For examples of some exceptional conditions, see the
+discussion of POLLPRI in poll(2).
+
+After select() has returned, exceptfds will be cleared of all file
+descriptors except for those for which an exceptional condition has
+occurred.
+
+nfds This argument should be set to the highest-numbered file descriptor
+in any of the three sets, plus 1. The indicated file descriptors in each
+set are checked, up to this limit (but see BUGS).
+
+timeout The timeout argument is a timeval structure (shown below) that
+specifies the interval that select() should block waiting for a file
+descriptor to become ready. The call will block until either:
+
+• a file descriptor becomes ready;
+
+• the call is interrupted by a signal handler; or
+
+• the timeout expires.
+
+Note that the timeout interval will be rounded up to the system clock
+granularity, and kernel scheduling delays mean that the blocking
+interval may over‐ run by a small amount.
+
+If both fields of the timeval structure are zero, then select() returns
+immediately. (This is useful for polling.)
+
+If timeout is specified as NULL, select() blocks indefinitely waiting
+for a file descriptor to become ready.
+
+pselect() The pselect() system call allows an application to safely wait
+until either a file descriptor becomes ready or until a signal is
+caught.
+
+The operation of select() and pselect() is identical, other than these
+three differences:
+
+• select() uses a timeout that is a struct timeval (with seconds and
+microseconds), while pselect() uses a struct timespec (with seconds and
+nanoseconds).
+
+• select() may update the timeout argument to indicate how much time was
+left. pselect() does not change this argument.
+
+• select() has no sigmask argument, and behaves as pselect() called with
+NULL sigmask.
+
+sigmask is a pointer to a signal mask (see sigprocmask(2)); if it is not
+NULL, then pselect() first replaces the current signal mask by the one
+pointed to by sigmask, then does the "select" function, and then
+restores the original signal mask. (If sigmask is NULL, the signal mask
+is not modified during the pselect() call.)
+
+Other than the difference in the precision of the timeout argument, the
+following pselect() call:
+
+ready = pselect(nfds, &readfds, &writefds, &exceptfds, timeout,
+&sigmask);
+
+is equivalent to atomically executing the following calls:
+
+sigset_t origmask;
+
+pthread_sigmask(SIG_SETMASK, &sigmask, &origmask); ready = select(nfds,
+&readfds, &writefds, &exceptfds, timeout); pthread_sigmask(SIG_SETMASK,
+&origmask, NULL);
+
+The reason that pselect() is needed is that if one wants to wait for
+either a signal or for a file descriptor to become ready, then an atomic
+test is needed to prevent race conditions. (Suppose the signal handler
+sets a global flag and returns. Then a test of this global flag followed
+by a call of select() could hang indefinitely if the signal arrived just
+after the test but just before the call. By contrast, pselect() allows
+one to first block signals, handle the signals that have come in, then
+call pselect() with the desired sigmask, avoiding the race.)
+
+The timeout The timeout argument for select() is a structure of the
+following type:
+
+struct timeval { time_t tv_sec; /* seconds */ suseconds_t tv_usec; /*
+microseconds */ };
+
+The corresponding argument for pselect() has the following type:
+
+struct timespec { time_t tv_sec; /* seconds */ long tv_nsec; /*
+nanoseconds */ };
+
+On Linux, select() modifies timeout to reflect the amount of time not
+slept; most other implementations do not do this. (POSIX.1 permits
+either behavior.) This causes problems both when Linux code which reads
+timeout is ported to other operating systems, and when code is ported to
+Linux that reuses a struct timeval for multiple select()s in a loop
+without reinitializing it. Consider timeout to be undefined after
+select() returns.
+

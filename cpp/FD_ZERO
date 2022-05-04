@@ -1,0 +1,6 @@
+FD_ZERO
+
+This macro clears (removes all file descriptors from) set. It
+should be employed as the first step in initializing a file descriptor
+set.
+

@@ -48,19 +48,27 @@ arguments is a design error that is avoided in poll(2) and epoll(7).
 The contents of a file descriptor set can be manipulated using the
 following macros:
 
-FD_ZERO() This macro clears (removes all file descriptors from) set. It
+===== FD_ZERO
+
+This macro clears (removes all file descriptors from) set. It
 should be employed as the first step in initializing a file descriptor
 set.
 
-FD_SET() This macro adds the file descriptor fd to set. Adding a file
+===== FD_SET
+
+This macro adds the file descriptor fd to set. Adding a file
 descriptor that is already present in the set is a no-op, and does not
 produce an error.
 
-FD_CLR() This macro removes the file descriptor fd from set. Removing a
+===== FD_CLR
+
+This macro removes the file descriptor fd from set. Removing a
 file descriptor that is not present in the set is a no-op, and does not
 produce an error.
 
-FD_ISSET() select() modifies the contents of the sets according to the
+===== FD_ISSET
+
+select() modifies the contents of the sets according to the
 rules described below. After calling select(), the FD_ISSET() macro can
 be used to test if a file descriptor is still present in a set.
 FD_ISSET() returns nonzero if the file descriptor fd is present in set,
@@ -347,7 +355,7 @@ POSIX.1. The Linux pselect() system call has the same behavior, but the
 glibc wrapper hides this behavior by internally copying the timeout to a
 local variable and passing that variable to the system call.
 
-===== EXAMPLES
+===== _SKIP_
 
 #include <stdio.h> #include <stdlib.h> #include <sys/select.h>
 

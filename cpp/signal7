@@ -384,7 +384,7 @@ Action: Core File size limit exceeded (4.2BSD); see setrlimit(2)
 Standard: -
 Action: Ign Window resize signal (4.3BSD, Sun)
 
-===== EXAMPLES
+===== _SKIP_
 
        Signal	   Standard   Action   Comment
 
