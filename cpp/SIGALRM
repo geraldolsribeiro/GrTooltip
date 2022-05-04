@@ -1,0 +1,6 @@
+SIGALRM
+
+Standard: P1990
+Action: Term Timer signal from alarm(2)
+
+

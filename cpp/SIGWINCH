@@ -1,0 +1,5 @@
+SIGWINCH
+
+Standard: -
+Action: Ign Window resize signal (4.3BSD, Sun)
+

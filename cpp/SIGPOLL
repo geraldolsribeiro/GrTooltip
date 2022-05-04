@@ -1,0 +1,6 @@
+SIGPOLL
+
+Standard: P2001
+Action: Term Pollable event (Sys V); synonym for SIGIO
+
+

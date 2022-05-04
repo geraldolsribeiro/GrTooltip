@@ -1,0 +1,6 @@
+SIGURG
+
+Standard: P2001
+Action: Ign Urgent condition on socket (4.2BSD)
+
+

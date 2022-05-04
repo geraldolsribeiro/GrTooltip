@@ -1,0 +1,6 @@
+SIGHUP
+
+Standard: P1990
+Action: Term Hangup detected on controlling terminal or death of controlling process
+
+

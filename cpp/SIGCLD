@@ -1,0 +1,6 @@
+SIGCLD
+
+Standard: -
+Action: Ign A synonym for SIGCHLD
+
+

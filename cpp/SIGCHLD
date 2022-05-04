@@ -1,0 +1,6 @@
+SIGCHLD
+
+Standard: P1990
+Action: Ign Child stopped or terminated
+
+

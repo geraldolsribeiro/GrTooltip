@@ -1,0 +1,6 @@
+SIGIOT
+
+Standard: -
+Action: Core IOT trap. A synonym for SIGABRT
+
+

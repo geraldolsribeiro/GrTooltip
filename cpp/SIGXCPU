@@ -1,0 +1,16 @@
+SIGXCPU
+
+P2001 Core CPU time limit exceeded (4.2BSD); see setrlimit(2)
+SIGXFSZ P2001 Core File size limit exceeded (4.2BSD); see setrlimit(2)
+SIGWINCH - Ign Window resize signal (4.3BSD, Sun)
+
+The signals SIGKILL and SIGSTOP cannot be caught, blocked, or ignored.
+
+Up to and including Linux 2.2, the default behavior for SIGSYS, SIGXCPU,
+SIGXFSZ, and (on architectures other than SPARC and MIPS) SIGBUS was to
+terminate the process (without a core dump). (On some other UNIX systems
+the default action for SIGXCPU and SIGXFSZ is to terminate the process
+without a core dump.) Linux 2.4 conforms to the POSIX.1-2001
+requirements for these signals, terminating the process with a core
+dump.
+

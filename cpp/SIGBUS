@@ -1,0 +1,6 @@
+SIGBUS
+
+Standard: P2001
+Action: Core Bus error (bad memory access)
+
+

@@ -1,0 +1,6 @@
+SIGSYS
+
+Standard: P2001
+Action: Core Bad system call (SVr4); see also seccomp(2)
+
+

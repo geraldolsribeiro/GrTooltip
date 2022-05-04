@@ -1,0 +1,6 @@
+SIGTRAP
+
+Standard: P2001
+Action: Core Trace/breakpoint trap
+
+

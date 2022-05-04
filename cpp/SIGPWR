@@ -1,0 +1,5 @@
+SIGPWR
+
+(which is not specified in POSIX.1-2001) is typically ignored by
+default on those other UNIX systems where it appears.
+

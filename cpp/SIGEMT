@@ -1,0 +1,6 @@
+SIGEMT
+
+is not specified in POSIX.1-2001, but nevertheless appears on
+most other UNIX systems, where its default action is typically to
+terminate the process with a core dump.
+

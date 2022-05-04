@@ -1,0 +1,6 @@
+SIGXFSZ
+
+Standard: P2001
+Action: Core File size limit exceeded (4.2BSD); see setrlimit(2)
+
+

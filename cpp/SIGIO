@@ -1,0 +1,4 @@
+SIGIO
+
+Standard: -
+Action: Term I/O now possible (4.2BSD)

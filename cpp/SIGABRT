@@ -1,0 +1,6 @@
+SIGABRT
+
+Standard: P1990
+Action: Core Abort signal from abort(3)
+
+
