@@ -1,0 +1,12 @@
+sockaddr_storage
+
+The sockaddr_storage structure is a sockaddr that is not associated with an
+address family.  Instead, it is large enough to hold the contents of any of the
+other sockaddr structures.  It can be used to embed sufficient storage for
+a sockaddr of any type within a larger structure.
+
+The structure only has a single member defined.  While there are other members
+that are used to pad out the size of the struct sockaddr_storage, they are not
+defined and must not be consumed.  The only valid member is:
+
+sa_family_t     ss_family       /* address family */
