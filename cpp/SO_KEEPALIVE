@@ -3,3 +3,6 @@ SO_KEEPALIVE
 Enable sending of keep-alive messages on
 connection-oriented sockets. Expects an integer boolean flag.
 
+
+When SO_KEEPALIVE is enabled on the socket the protocol checks in
+a protocol-specific manner if the other end is still alive.  

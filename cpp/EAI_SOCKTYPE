@@ -1,0 +1,6 @@
+EAI_SOCKTYPE
+
+The requested socket type is not supported. This could
+occur, for example, if hints.ai_socktype and hints.ai_protocol are
+inconsistent (e.g., SOCK_DGRAM and IPPROTO_TCP, respectively).
+

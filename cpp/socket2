@@ -200,9 +200,17 @@ Set the close-on-exec (FD_CLOEXEC) flag on the new file descriptor. See the desc
        write(2)	 calls	or  some variant of the send(2) and recv(2) calls.  When a session has been completed a close(2) may be performed.  Out-of-band data may also be
        transmitted as described in send(2) and received as described in recv(2).
 
-       The communications protocols which implement a SOCK_STREAM ensure that data is not lost or duplicated.  If a piece of data for which the peer protocol has buffer
-       space  cannot  be successfully transmitted within a reasonable length of time, then the connection is considered to be dead.  When SO_KEEPALIVE is enabled on the
-       socket the protocol checks in a protocol-specific manner if the other end is still alive.  A SIGPIPE signal is raised if a process sends or receives on a  broken
+SOCK_STREAM
+The communications protocols which implement a SOCK_STREAM ensure that
+data is not lost or duplicated.  If a piece of data for which the peer
+protocol has buffer space  cannot  be successfully transmitted within
+a reasonable length of time, then the connection is considered to be
+dead.
+
+When SO_KEEPALIVE is enabled on the socket the protocol checks in
+a protocol-specific manner if the other end is still alive.  
+
+       A SIGPIPE signal is raised if a process sends or receives on a  broken
        stream;	this  causes naive processes, which do not handle the signal, to exit.	SOCK_SEQPACKET sockets employ the same system calls as SOCK_STREAM sockets.  The
        only difference is that read(2) calls will return only the amount of data requested, and any data remaining in the arriving packet will be discarded.   Also  all
        message boundaries in incoming datagrams are preserved.

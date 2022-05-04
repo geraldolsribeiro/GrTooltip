@@ -1,0 +1,6 @@
+EAI_NONAME
+
+The node or service is not known; or both node and service
+are NULL; or AI_NUMERICSERV was specified in hints.ai_flags and service
+was not a numeric port- number string.
+

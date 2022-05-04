@@ -1,0 +1,5 @@
+EAI_BADFLAGS
+
+hints.ai_flags contains invalid flags; or, hints.ai_flags
+included AI_CANONNAME and name was NULL.
+

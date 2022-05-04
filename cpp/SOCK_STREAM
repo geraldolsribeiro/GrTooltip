@@ -1,5 +1,11 @@
 SOCK_STREAM
 
-Provides sequenced, reliable, two-way, connection-based byte streams. An out-of-band data transmission mechanism may be supported.
+Provides sequenced, reliable, two-way, connection-based byte streams.
+An out-of-band data transmission mechanism may be supported.
 
+The communications protocols which implement a SOCK_STREAM ensure that
+data is not lost or duplicated.  If a piece of data for which the peer
+protocol has buffer space  cannot  be successfully transmitted within
+a reasonable length of time, then the connection is considered to be
+dead.
 

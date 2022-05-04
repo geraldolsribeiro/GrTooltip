@@ -1,0 +1,7 @@
+AI_PASSIVE
+
+this tells getaddrinfo() to assign the address of my local host to the socket
+structures. This is nice because then you don’t have to hardcode it. (Or you
+can put a specific address in as the first parameter to getaddrinfo() where
+I currently have NULL, up there.)
+

@@ -1,0 +1,11 @@
+AI_IDN
+
+If this flag is specified, then the node name given in node is
+converted to IDN format if necessary. The source encoding is that of the
+current locale.
+
+If the input name contains non-ASCII characters, then the IDN encoding
+is used. Those parts of the node name (delimited by dots) that contain
+non-ASCII characters are encoded using ASCII Compatible Encoding (ACE)
+before being passed to the name resolution functions.
+

@@ -1,0 +1,20 @@
+AI_CANONIDN
+
+After a successful name lookup, and if the AI_CANONNAME flag
+was specified, getaddrinfo() will return the canonical name of the node
+corresponding to the addrinfo structure value passed back. The return
+value is an exact copy of the value returned by the name resolution
+function.
+
+If the name is encoded using ACE, then it will contain the xn-- prefix
+for one or more components of the name. To convert these components into
+a read‐ able form the AI_CANONIDN flag can be passed in addition to
+AI_CANONNAME. The resulting string is encoded using the current locale's
+encoding.
+
+AI_IDN_ALLOW_UNASSIGNED, AI_IDN_USE_STD3_ASCII_RULES Setting these flags
+will enable the IDNA_ALLOW_UNASSIGNED (allow unassigned Unicode code
+points) and IDNA_USE_STD3_ASCII_RULES (check output to make sure it is a
+STD3 conforming hostname) flags respectively to be used in the IDNA
+handling.
+

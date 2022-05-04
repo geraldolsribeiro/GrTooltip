@@ -1,0 +1,10 @@
+EAI_SERVICE
+
+The requested service is not available for the requested
+socket type. It may be available through another socket type. For
+example, this error could oc‐ cur if service was "shell" (a service
+available only on stream sockets), and either hints.ai_protocol was
+IPPROTO_UDP, or hints.ai_socktype was SOCK_DGRAM; or the error could
+occur if service was not NULL, and hints.ai_socktype was SOCK_RAW (a
+socket type that does not support the concept of ser‐ vices).
+

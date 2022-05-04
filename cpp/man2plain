@@ -1,6 +1,6 @@
 #!/bin/bash
 
-for man in socket netdevice open
+for man in socket netdevice open gai_strerror
 do
   # Script vim
   cat <<EOF > s1
@@ -9,7 +9,7 @@ do
 EOF
 
   # If the txt file exists the automatic edition is ignored
-  for n in 2 7
+  for n in 2 3 7
   do
     # man 7 $man || man 2 $man | pandoc -f man -t plain > $man.txt
     if [ ! -f "${man}$n" ]; then
@@ -19,7 +19,7 @@ EOF
   done
   rm s1
 
-  for n in 2 7
+  for n in 2 3 7
   do
     if [ -f "${man}$n" ]; then
       csplit ${man}$n '/===== /' '{*}'
@@ -39,7 +39,11 @@ EOF
   done
 done
 
-for i in COLOPHON CONFORMING DESCRIPTION NOTES RETURN SYNOPSIS VERSIONS
+# Remove section title
+for i in ATTRIBUTES COLOPHON CONFORMING DESCRIPTION EXAMPLES FILES NOTES RETURN SYNOPSIS VERSIONS
 do
   rm -f "$i"
 done
+
+# Remove arquivos vazios
+find . -type f -size 1c -delete

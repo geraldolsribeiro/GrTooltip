@@ -1,0 +1,7 @@
+EAI_SYSTEM
+
+Other system error, check errno for details.
+
+The gai_strerror() function translates these error codes to a human
+readable string, suitable for error reporting.
+
