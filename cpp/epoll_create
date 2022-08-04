@@ -1,0 +1,20 @@
+`epoll_create`
+
+The epoll instance is created by means of the `epoll_create` system call, which
+returns a file descriptor to the epoll instance. The signature of `epoll_create`
+is as follows:
+
+    #include <sys/epoll.h>
+    int epoll_create(int size);
+
+The size argument is an indication to the kernel about the number of file
+descriptors a process wants to monitor, which helps the kernel to decide the
+size of the epoll instance. Since Linux 2.6.8, this argument is ignored because
+the epoll data structure dynamically resizes as file descriptors are added or
+removed from it.
+
+The `epoll_create` system call returns a file descriptor to the newly created
+epoll kernel data structure. The calling process can then use this file
+descriptor to add, remove or modify other file descriptors it wants to monitor
+for I/O to the epoll instance.
+

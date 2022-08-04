@@ -1,0 +1,22 @@
+epoll
+
+## Epoll vs Select/Poll
+
+* We can add and remove file descriptor while waiting `epoll_wait` returns only
+* the objects with ready file descriptors epoll has better performance – O(1)
+* instead of O(n) epoll can behave as level triggered or edge triggered (see
+* man page) epoll is Linux specific so non portable
+
+
+Unlike poll, epoll itself is not a system call. It’s a kernel data structure
+that allows a process to multiplex I/O on multiple file descriptors.
+
+## The use process
+
+1. adopt `epoll_create()` Create a epoll object
+2. Build for the descriptor to listen `epoll_events` Structure , Use
+   `epoll_ctl()` Sign up to epoll In the object
+3. Use `epoll_wait()` Waiting for events to happen
+4. according to `epoll_wait()` Back to `epoll_event` The structure array
+   determines the type and source of the event and processes it
+5. Continue to use `epoll_wait()` Wait for new events to happen

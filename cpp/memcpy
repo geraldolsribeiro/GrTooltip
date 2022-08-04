@@ -1,0 +1,8 @@
+memcpy
+
+    #pragma GCC diagnostic push
+    #pragma GCC diagnostic ignored "-Warray-bounds"
+    #pragma GCC diagnostic ignored "-Wstringop-overflow"
+        assert(length <= sizeof(m_buffer));
+        memcpy(m_buffer, pMsg, length);
+    #pragma GCC diagnostic pop
