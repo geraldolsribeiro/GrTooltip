@@ -1,0 +1,6 @@
+ESTALE
+
+Stale file handle (POSIX.1-2001).
+
+This error can occur for NFS and for other filesystems.
+

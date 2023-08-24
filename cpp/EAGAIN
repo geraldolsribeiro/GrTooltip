@@ -1,0 +1,5 @@
+EAGAIN
+
+Resource temporarily unavailable (may be the same value as
+EWOULDBLOCK) (POSIX.1-2001).
+

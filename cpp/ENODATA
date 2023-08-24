@@ -1,0 +1,8 @@
+ENODATA
+
+The named attribute does not exist, or the process has no access
+to this attribute; see xattr(7).
+
+In POSIX.1-2001 (XSI STREAMS option), this error was described as "No
+message is available on the STREAM head read queue".
+

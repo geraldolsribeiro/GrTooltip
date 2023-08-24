@@ -1,0 +1,6 @@
+EDEADLOCK
+
+On most architectures, a synonym for EDEADLK. On some
+architectures (e.g., Linux MIPS, PowerPC, SPARC), it is a separate error
+code "File locking deadlock error".
+

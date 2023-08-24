@@ -1,0 +1,6 @@
+ETIME
+
+Timer expired (POSIX.1 (XSI STREAMS option)).
+
+(POSIX.1 says "STREAM ioctl(2) timeout".)
+
