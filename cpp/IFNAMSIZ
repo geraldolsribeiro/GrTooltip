@@ -2,6 +2,10 @@ IFNAMSIZ
 
 Interface name size.
 
+From if.h:
+
+#define	IFNAMSIZ	16
+
 struct ifreq {
   char ifr_name[IFNAMSIZ]; /* Interface name */
   union {

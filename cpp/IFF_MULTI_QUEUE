@@ -1,4 +1,4 @@
-IFF_MULTI_QUEUE
+IFF_MULTI_QUEUE Create a queue of multiqueue device
 
 3.3 Multiqueue tuntap interface:
 

@@ -1,4 +1,4 @@
-IFF_NO_PI
+IFF_NO_PI Do not provide packet information
 
 This commit adds flag IFF_NO_PI to tun/tap interface settings on Linux. It
 changes frame format in order not to include protocol information header. That
@@ -19,3 +19,4 @@ was removed from the kernel more than 15 years ago. Removal of this mode
 significantly simplifies the logic within the element.
 
 https://github.com/kohler/click/pull/397
+
